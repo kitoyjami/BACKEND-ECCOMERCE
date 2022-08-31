@@ -11,30 +11,23 @@ const schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    descripcion:{
+    apellidos:{
         type: String,
         required: true
     },
-    especificaciones:{
+    telefono:{
         type: String,
         required: true
     },
-    categoria:{
+    correo:{
         type: String,
         required: true
     },
-    precio:{
-        type: Number,
-        required: true
-    },
-    stock:{
-        type: Number,
-        required: true
-    },
-    foto:{
+    password:{
         type: String,
+        required: true
     }
 
 })
 
-export default mongoose.model("Product", schema)
+export default mongoose.model("Vendedor", schema)
