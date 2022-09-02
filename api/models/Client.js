@@ -60,9 +60,6 @@ const schema = new mongoose.Schema({
     phone:{
         type: String,
         required: true
-    },
-    contact:{
-        type: String,
     }
 })
 

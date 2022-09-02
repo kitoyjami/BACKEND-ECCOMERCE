@@ -21,7 +21,6 @@ const createClientSchema = joi.object({
     email:joi.string().required(),
     password:joi.string().required(),
     phone:joi.string().required(),
-    contact:joi.string().required
 })
 
 
