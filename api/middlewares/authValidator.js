@@ -1,6 +1,6 @@
 import jwt from 'jwt-simple'
 import config from '../config/index.js'
-import User from '../models/User.js'
+import Client from '../models/Client.js'
 
 const isAuth = async (req, res, next) => {
 
@@ -23,9 +23,9 @@ const isAuth = async (req, res, next) => {
 
         const payload = jwt.decode(token, config.jwt.secret)
         
-        const user = await User.findById(payload.userId)
+        const client = await Client.findById(payload.clientId)
 
-        if(!user)
+        if(!client)
         {
             return res.status(401).json({
                 msg: 'Token inválido'
