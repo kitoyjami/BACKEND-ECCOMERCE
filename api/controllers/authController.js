@@ -49,6 +49,7 @@ const login = async(req, res) =>{
         const client = await Client.findOne({
             email: req.body.email,
         })
+        console.log(client.email)
         if (!client){
             return res.status(404).json({
                 msg: 'Usuario no encontrado'
@@ -66,7 +67,7 @@ const login = async(req, res) =>{
         expirationDate.setMinutes(today.getMinutes()+3)
 
         const payload = {
-            clientId : client.id,
+            userId : client.id,
             expirationDate
         }
 
