@@ -8,19 +8,19 @@ import mongoose from "mongoose"
 
 const schema = new mongoose.Schema({
 
-    nombre:{
+    name:{
         type: String,
         required: true
     },
-    apellido:{
+    lastName:{
         type: String,
         required: true
     },
-    direccion: {
+    address: {
         type: String,
         required: true
     },
-    calle:{
+    street:{
         type: String,
         required: true
     },
@@ -28,28 +28,28 @@ const schema = new mongoose.Schema({
         type: String,
 
     },
-    nroExterior:{
+    numExt:{
         type: String,
     },
-    nroInterior:{
+    numInt:{
         type: String,
     },
-    entreCalle:{
+    betweenStreet:{
         type: String,
     },
-    ciudad:{
+    city:{
         type: String,
     },
-    pais:{
+    country:{
         type: String,
     },
-    codigoPostal:{
+    postalCode:{
         type: String,
     },
-    referencias:{
+    references:{
         type: String,
     },
-    correo:{
+    email:{
         type: String,
         required: true
     },
@@ -57,11 +57,11 @@ const schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    telefono:{
+    phone:{
         type: String,
         required: true
     },
-    contacto:{
+    contact:{
         type: String,
     }
 })

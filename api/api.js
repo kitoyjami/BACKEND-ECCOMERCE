@@ -1,4 +1,5 @@
 import express from "express"
+import authRoutes from "./routes/authRoutes.js"
 
 const api = express()
 
@@ -14,5 +15,8 @@ api.get("/status", (req, res) => {
 
 // to do => por hacer
 // TODO: Aca se registran las rutas
+
+api.use(authRoutes)
+
 
 export default api

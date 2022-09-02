@@ -7,19 +7,19 @@ import mongoose from "mongoose"
  */
 
 const schema = new mongoose.Schema({
-    nombre:{
+    name:{
         type: String,
         required: true
     },
-    apellidos:{
+    lastName:{
         type: String,
         required: true
     },
-    telefono:{
+    phone:{
         type: String,
         required: true
     },
-    correo:{
+    email:{
         type: String,
         required: true
     },
