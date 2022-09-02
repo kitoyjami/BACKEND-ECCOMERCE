@@ -49,7 +49,6 @@ const login = async(req, res) =>{
         const client = await Client.findOne({
             email: req.body.email,
         })
-        console.log(client.email)
         if (!client){
             return res.status(404).json({
                 msg: 'Usuario no encontrado'
@@ -57,6 +56,7 @@ const login = async(req, res) =>{
         }
         const passCorrect=await bcrypt.compare(req.body.password
             , client.password)
+            console.log(passCorrect)
         if (!passCorrect){
             return res.status(401),json({
                 msg: 'Credenciales inválidas'
@@ -64,11 +64,11 @@ const login = async(req, res) =>{
         }
 
         const expirationDate= new Date()
-        expirationDate.setMinutes(today.getMinutes()+3)
+        //expirationDate.setMinutes(today.getMinutes()+3)
 
         const payload = {
             userId : client.id,
-            expirationDate
+            //expirationDate
         }
 
         const token= jwt.encode(payload,config.jwt.secret)
