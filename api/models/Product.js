@@ -1,5 +1,12 @@
 import mongoose from "mongoose"
 
+import { v2 as cloudinary } from 'cloudinary'
+
+cloudinary.config({ 
+    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
+    secure: true
+  });
+
 /**
  * Cosas necesarias para crear un modelo
  * 1. schema

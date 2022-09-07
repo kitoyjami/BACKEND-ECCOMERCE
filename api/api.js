@@ -9,7 +9,7 @@ api.use(express.json())
 
 api.get("/status", (req, res) => {
     return res.json({
-        msg: "API en linea y funcionando"
+        msg: "API en linea y funcionando hola maicol"
     })
 })
 
